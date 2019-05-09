@@ -13,16 +13,19 @@ namespace MyShop.Core.Models
         public string Id { get; set; }
 
         [StringLength(20)]
-        [DisplayName("Product Name")]
+        [DisplayName("Producto")]
         public string Name { get; set; }
+        [DisplayName("Descripción")]
         public string Description { get; set; }
-
-        [Range(0, 1000)]
+        [DisplayName("Precio")]
         public decimal Price { get; set; }
+        [DisplayName("Categoría")]
         public string Category { get; set; }
+        [DisplayName("Imagen")]
         public string Image { get; set; }
 
-        public Product() {
+        public Product()
+        {
             this.Id = Guid.NewGuid().ToString();
         }
 
